@@ -3,34 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Storyteller & Illustrator</title> <!-- Updated title -->
+    <title>AI Storyteller & Illustrator & Narrator</title> <!-- Updated title -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>A.I. Storyteller & Illustrator</h1> <!-- Updated heading -->
-    <p>Enter your story idea below, and the AI will generate a short story and an accompanying image using Gemini and DALL-E.</p>
+    <h1>A.I. Storyteller & Illustrator & Narrator</h1> <!-- Updated heading -->
+    <p>Enter your story idea below, and the AI will generate a short story, an accompanying image, and narration using Gemini, DALL-E, and ElevenLabs.</p> <!-- Updated description -->
 
     <div class="container">
         <textarea id="story-idea" placeholder="e.g., A lonely robot discovers a hidden garden on Mars..."></textarea>
-        <!-- Updated button text -->
-        <button id="generate-button">Generate Story & Image</button>
+        <button id="generate-button">Generate Story, Image & Audio</button> <!-- Updated button text -->
 
         <!-- Updated loading text -->
-        <div id="loading" class="hidden">Generating story and image... Please wait.</div>
-        <div id="error-message" class="hidden error"></div>
+        <div id="loading" class="hidden">Generating story, image, and audio... Please wait.</div>
+        <div id="error-message" class="hidden error"></div> <!-- General Errors -->
+        <div id="partial-error-message" class="hidden warning"></div> <!-- For non-critical errors -->
+
 
         <div id="results" class="hidden">
             <h2>Generated Story:</h2>
             <p id="story-output"></p>
 
+             <!-- Audio Player -->
+            <div id="audio-container" class="hidden">
+                 <h3>Listen to the Story:</h3>
+                 <audio id="story-audio" controls src="">
+                     Your browser does not support the audio element.
+                 </audio>
+                 <p id="audio-error" class="hidden error"></p> <!-- Specific area for audio errors -->
+            </div>
+
+
             <h2>Generated Image:</h2>
-            <!-- Container for the image -->
             <div id="image-container" class="hidden">
                  <img id="generated-image" src="" alt="AI Generated Image">
-                 <!-- Optionally display the prompt used -->
                  <p class="image-prompt-display hidden"><em>Prompt used: <span id="image-prompt-text"></span></em></p>
             </div>
-            <p id="image-error" class="hidden error"></p> <!-- Specific area for image errors -->
+             <p id="image-error" class="hidden error"></p> <!-- Specific area for image errors -->
 
         </div>
     </div>
