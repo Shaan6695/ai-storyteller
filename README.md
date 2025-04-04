@@ -1,6 +1,6 @@
 # AI-Storyteller
 
-Story Telling program that takes a users story idea and generates a short story, an image, and image prompt for the image generation. 
+This AI Powered Story Telling program takes a users story idea and generates a short story, an image, and the image prompt for the image generation. 
 
 Using Gemini 1.5 Flash API for text generation and Open AI's API for Image Generation. 
 
