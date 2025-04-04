@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Storyteller & Illustrator</title> <!-- Updated title -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>A.I. Storyteller & Illustrator</h1> <!-- Updated heading -->
+    <p>Enter your story idea below, and the AI will generate a short story and an accompanying image using Gemini and DALL-E.</p>
+
+    <div class="container">
+        <textarea id="story-idea" placeholder="e.g., A lonely robot discovers a hidden garden on Mars..."></textarea>
+        <!-- Updated button text -->
+        <button id="generate-button">Generate Story & Image</button>
+
+        <!-- Updated loading text -->
+        <div id="loading" class="hidden">Generating story and image... Please wait.</div>
+        <div id="error-message" class="hidden error"></div>
+
+        <div id="results" class="hidden">
+            <h2>Generated Story:</h2>
+            <p id="story-output"></p>
+
+            <h2>Generated Image:</h2>
+            <!-- Container for the image -->
+            <div id="image-container" class="hidden">
+                 <img id="generated-image" src="" alt="AI Generated Image">
+                 <!-- Optionally display the prompt used -->
+                 <p class="image-prompt-display hidden"><em>Prompt used: <span id="image-prompt-text"></span></em></p>
+            </div>
+            <p id="image-error" class="hidden error"></p> <!-- Specific area for image errors -->
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
